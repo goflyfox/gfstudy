@@ -1,0 +1,4 @@
+GET http://localhost:8199/total
+
+###
+GET http://localhost:8199/total2

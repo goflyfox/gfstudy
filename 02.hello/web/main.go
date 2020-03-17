@@ -13,6 +13,7 @@ func main() {
 	s.BindHandler("/hello", func(r *ghttp.Request) {
 		r.Response.Writeln("Hello World!")
 	})
+	g.Config()
 
 	s.SetPort(80)
 	s.Run()

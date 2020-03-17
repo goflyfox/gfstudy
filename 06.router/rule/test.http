@@ -1,0 +1,15 @@
+POST http://localhost:8199/hello
+
+###
+GET http://localhost:8199/abc
+
+###
+GET http://localhost:8199/a/add
+
+###
+GET http://localhost:8199/a/update
+
+###
+GET http://localhost:8199/user/list/11.html
+
+###
