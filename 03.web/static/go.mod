@@ -1,4 +1,4 @@
-module gfhello
+module gfstatic
 
 go 1.14
 

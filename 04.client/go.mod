@@ -1,4 +1,4 @@
-module gfhello
+module gfclient
 
 go 1.14
 
