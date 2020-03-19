@@ -1,4 +1,4 @@
-module gfhello2
+module gfweb2
 
 go 1.14
 

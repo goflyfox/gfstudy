@@ -1,0 +1,19 @@
+[server]
+    # 端口号
+    Address          = ":8199"
+    # 静态目录
+    ServerRoot       = "public"
+    # 入口文件
+    IndexFiles       = ["index.html", "main.html"]
+    # 系统访问日志
+    AccessLogEnabled = true
+    # 系统异常日志panic
+    ErrorLogEnabled  = true
+    # 系统日志目录，启动，访问，异常
+    LogPath          = "gflogs"
+
+[logger]
+    # 标准日志目录
+    path   = "logs"
+    # 日志级别
+    level  = "all"
