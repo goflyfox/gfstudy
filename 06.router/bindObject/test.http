@@ -1,9 +1,0 @@
-GET http://localhost:8199/object/
-
-###
-GET http://localhost:8199/object/index
-
-###
-GET http://localhost:8199/object/show
-
-###

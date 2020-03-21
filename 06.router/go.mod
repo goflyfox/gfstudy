@@ -1,4 +1,4 @@
-module gf_router1
+module gf_router
 
 go 1.14
 
