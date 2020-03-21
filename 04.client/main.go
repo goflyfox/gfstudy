@@ -42,8 +42,6 @@ func main() {
 		r.Response.Writeln("user-agent::test3")
 	})
 
-	g.Config()
-
 	s.SetPort(80)
 	s.Run()
 }
