@@ -9,8 +9,8 @@ import (
 func main() {
 	s := g.Server()
 	// 常规注册
-	// hello方法，可get，post调用
-	s.BindHandler("/hello", func(r *ghttp.Request) {
+	// hello方法，post调用
+	s.BindHandler("POST:/hello", func(r *ghttp.Request) {
 		r.Response.Writeln("url" + r.Router.Uri)
 	})
 	// 所有方法，url包含name参数
