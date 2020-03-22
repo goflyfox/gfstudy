@@ -36,11 +36,13 @@ func main() {
 	})
 	// POST Header
 	group.POST("/test4", func(r *ghttp.Request) {
-		r.Response.Writeln("user-agent::test4")
-		r.Response.Writeln("accept-encoding:", r.Header.Get("accept-encoding"))
-		r.Response.Writeln("accept-language:", r.Header.Get("accept-encoding"))
-		r.Response.Writeln("referer:", r.Header.Get("accept-encoding"))
-		r.Response.Writeln("cookie:", r.Header.Get("cookie"))
+		r.Response.Writeln("func:test4")
+		h := r.Header
+		r.Response.Writeln("accept-encoding:", h.Get("accept-encoding"))
+		r.Response.Writeln("accept-language:", h.Get("accept-language"))
+		r.Response.Writeln("referer:", h.Get("referer"))
+		r.Response.Writeln("cookie:", h.Get("cookie"))
+		r.Response.Writeln(r.Cookie.Map())
 	})
 
 	s.SetPort(80)

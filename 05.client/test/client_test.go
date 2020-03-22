@@ -16,6 +16,12 @@ func TestGet(t *testing.T) {
 		defer response.Close()
 		t.Log(response.ReadAllString())
 	}
+	if response, err := ghttp.Post(path); err != nil {
+		panic(err)
+	} else {
+		defer response.Close()
+		t.Log(response.ReadAllString())
+	}
 }
 
 // GET请求带参数
@@ -64,11 +70,11 @@ func TestPostHeader(t *testing.T) {
 func TestPostHeader2(t *testing.T) {
 	c := ghttp.NewClient()
 	c.SetHeaderRaw(`
-     accept-encoding: gzip, deflate, br
-     accept-language: zh-CN,zh;q=0.9,en;q=0.8
-     referer: https://idonottell.you
-     cookie: name=john; score=100
-     user-agent: my test http client
+accept-encoding: gzip, deflate, br
+accept-language: zh-CN,zh;q=0.9,en;q=0.8
+referer: https://idonottell.you
+cookie: name=john; score=100
+user-agent: my test http client
  	`)
 	if r, e := c.Post(path + "/test4"); e != nil {
 		panic(e)
