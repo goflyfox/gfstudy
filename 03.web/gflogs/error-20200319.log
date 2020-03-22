@@ -1,0 +1,42 @@
+2020-03-19 22:30:43.825 [ERRO] 500, "GET http localhost:8199 /welcome HTTP/1.1" 0.002, [::1], "", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36"
+Stack:
+1. 123
+   1).  main.main.func1
+    	D:/workspaces/go_workspaces/github/gfstudy/03.web/hello/main.go:14
+
+2020-03-19 22:30:44.046 [ERRO] 500, "GET http localhost:8199 /welcome HTTP/1.1" 0.000, [::1], "", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36"
+Stack:
+1. 123
+   1).  main.main.func1
+    	D:/workspaces/go_workspaces/github/gfstudy/03.web/hello/main.go:14
+
+2020-03-19 22:30:44.375 [ERRO] 500, "GET http localhost:8199 /welcome HTTP/1.1" 0.000, [::1], "", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36"
+Stack:
+1. 123
+   1).  main.main.func1
+    	D:/workspaces/go_workspaces/github/gfstudy/03.web/hello/main.go:14
+
+2020-03-19 22:30:44.608 [ERRO] 500, "GET http localhost:8199 /welcome HTTP/1.1" 0.001, [::1], "", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36"
+Stack:
+1. 123
+   1).  main.main.func1
+    	D:/workspaces/go_workspaces/github/gfstudy/03.web/hello/main.go:14
+
+2020-03-19 22:30:44.818 [ERRO] 500, "GET http localhost:8199 /welcome HTTP/1.1" 0.001, [::1], "", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36"
+Stack:
+1. 123
+   1).  main.main.func1
+    	D:/workspaces/go_workspaces/github/gfstudy/03.web/hello/main.go:14
+
+2020-03-19 22:30:45.039 [ERRO] 500, "GET http localhost:8199 /welcome HTTP/1.1" 0.001, [::1], "", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36"
+Stack:
+1. 123
+   1).  main.main.func1
+    	D:/workspaces/go_workspaces/github/gfstudy/03.web/hello/main.go:14
+
+2020-03-19 23:41:53.830 [ERRO] 500, "GET http localhost:8199 /panic HTTP/1.1" 0.001, [::1], "", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36"
+Stack:
+1. 123
+   1).  main.main.func2
+    	D:/workspaces/go_workspaces/github/gfstudy/03.web/main.go:19
+
