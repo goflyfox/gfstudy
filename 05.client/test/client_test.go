@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-var path = "http://127.0.0.1"
+var path = "http://127.0.0.1/api"
 
 // GET请求
 func TestGet(t *testing.T) {
