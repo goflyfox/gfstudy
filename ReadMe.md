@@ -13,7 +13,14 @@ GoFrame基础教程-快速入门
 * [09.goframeRedis操作.md](doc_basic/09.goframeRedis操作.md)
 * [10.goframe常用工具介绍.md](doc_basic/10.goframe常用工具介绍.md)
 
+## 代码地址
+
+* github：[https://github.com/goflyfox/gfstudy](https://github.com/goflyfox/gfstudy)
+* gitee：[https://gitee.com/goflyfox/gfstudy](https://gitee.com/goflyfox/gfstudy)
+
 ## 教程视频
+
+教程地址：[goframe基础教程-快速入门](https://www.bilibili.com/video/bv157411Z7Le)
 
 
 ## 其他说明
