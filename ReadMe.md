@@ -1,5 +1,9 @@
 GoFrame基础教程-快速入门
 
+## 教程内容
+
+goframe基本介绍，安装和部署，web项目，路由注册、http 客户端，配置文件、日志打印、Mysql数据库连接、Redis连接，常用工具gstr，gmap，gjson，md5，gconv
+
 ## 教程目录
 
 * [01.goframe介绍.md](doc_basic/01.goframe介绍.md)
