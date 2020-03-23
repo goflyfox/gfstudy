@@ -59,7 +59,7 @@ func TestWhere(t *testing.T) {
 	fmt.Println("name:", r.Map()["name"])
 	// 查询对象
 	//l, err := g.DB().Table("user").As("t").Where("t.uid > ?", 10000).All()
-	// 也可以简写为
+	// 也可以简写为 select * from user as t where t.uid > 10000
 	l, err := g.DB().Table("user").As("t").All("t.uid > ?", 10000)
 	if err != nil {
 		panic(err)
