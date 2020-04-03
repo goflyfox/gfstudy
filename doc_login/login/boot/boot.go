@@ -1,0 +1,6 @@
+package boot
+
+func init() {
+
+}
+
