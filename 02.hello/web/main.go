@@ -8,12 +8,12 @@ import (
 func main() {
 	s := g.Server()
 	s.BindHandler("/", func(r *ghttp.Request) {
-		r.Response.Writeln("Welcome GoFrame!")
+		r.Response.Writeln("Welcome GoFrame!!!")
 	})
 	s.BindHandler("/hello", func(r *ghttp.Request) {
 		r.Response.Writeln("Hello World!")
 	})
 
-	s.SetPort(80)
+	s.SetPort(8080)
 	s.Run()
 }
