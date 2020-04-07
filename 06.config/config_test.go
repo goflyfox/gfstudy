@@ -9,7 +9,7 @@ import (
 // 基本配置使用
 func TestConfig(t *testing.T) {
 	// 默认当前路径或者config路径，默认文件config.toml
-	// /home/www/templates/
+	// /home/www/template/
 	fmt.Println(g.Config().Get("viewpath"))
 	fmt.Println(g.Cfg().Get("viewpath"))
 	// 127.0.0.1:6379,1
