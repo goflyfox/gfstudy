@@ -1,0 +1,10 @@
+# 账号
+username = "admin"
+# 密码
+password = "123456"
+
+# 模板引擎配置
+[viewer]
+    Path        = "template"
+    DefaultFile = "index.html"
+    Delimiters  =  ["${", "}"]
