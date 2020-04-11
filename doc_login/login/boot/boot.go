@@ -1,6 +1,0 @@
-package boot
-
-func init() {
-
-}
-
