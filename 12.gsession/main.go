@@ -21,7 +21,6 @@ func main() {
 		s.SetConfigWithMap(g.Map{
 			"SessionStorage": gsession.NewStorageMemory(),
 		})
-		gsession.NewStorageFile("/tmp")
 	}
 
 	// 常规注册
