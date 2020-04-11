@@ -19,17 +19,23 @@ goframe基本介绍，安装和部署，web项目，路由注册、http 客户�
 * [09.goframeRedis操作.md](doc_basic/09.goframeRedis操作.md)
 * [10.goframe常用工具介绍.md](doc_basic/10.goframe常用工具介绍.md)
 
-### 代码地址
-
-* github：[https://github.com/goflyfox/gfstudy](https://github.com/goflyfox/gfstudy)
-* gitee：[https://gitee.com/goflyfox/gfstudy](https://gitee.com/goflyfox/gfstudy)
-
 ### 教程视频
 
 * bilibili教程地址：[goframe基础教程-快速入门](https://www.bilibili.com/video/bv157411Z7Le)
 * 西瓜视频教程地址：[goframe基础教程-快速入门](https://www.ixigua.com/pseries/6809290943603147278/)
 
 ## GoFrame实战教程-登录篇
+
+### 教程目录
+
+* [11.GoFrame实战之登录介绍.md](doc_login/11.GoFrame实战之登录介绍.md)
+* [12.GoFrame实现之登录gsession.md](doc_login/12.GoFrame实现之登录gsession.md)
+
+## 代码地址
+
+* github：[https://github.com/goflyfox/gfstudy](https://github.com/goflyfox/gfstudy)
+* gitee：[https://gitee.com/goflyfox/gfstudy](https://gitee.com/goflyfox/gfstudy)
+
 
 ## 其他说明
 
