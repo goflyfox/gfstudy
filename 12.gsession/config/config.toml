@@ -1,0 +1,20 @@
+# 账号
+username = "admin"
+# 密码
+password = "123456"
+
+# session存储方式file,memory,redis
+# SessionStorage = "file"
+
+[server]
+    Address          = ":8199"
+    SessionIdName    = "gSessionId"
+    SessionPath      = "./gession"
+    SessionMaxAge    = "1m"
+    DumpRouterMap    = true
+
+# 模板引擎配置
+[viewer]
+    Path        = "template"
+    DefaultFile = "index.html"
+    Delimiters  =  ["${", "}"]
