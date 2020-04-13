@@ -9,11 +9,13 @@ func main() {
 	s := g.Server()
 	// 常规注册
 	group := s.Group("/")
+	// 登录页面
 	group.GET("/", func(r *ghttp.Request) {
 		r.Response.WriteTpl("index.html", g.Map{
 			"title": "登录页面",
 		})
 	})
+	// 登录接口
 	group.POST("/login", func(r *ghttp.Request) {
 		username := r.GetString("username")
 		password := r.GetString("password")
@@ -35,16 +37,11 @@ func main() {
 			"msg":  "登录失败",
 		})
 	})
+	// 列表页面
 	group.GET("/user/index", func(r *ghttp.Request) {
 		r.Response.WriteTpl("user_index.html", g.Map{
-			"title": "登录页面",
-		})
-	})
-	group.POST("/user/list", func(r *ghttp.Request) {
-		r.Response.WriteJson(g.Map{
-			"code": 0,
-			"msg":  "成功",
-			"data": g.List{
+			"title": "列表页面",
+			"dataList": g.List{
 				g.Map{
 					"date":    "2020-04-01",
 					"name":    "朱元璋",
@@ -62,6 +59,7 @@ func main() {
 				},
 			}})
 	})
+	// 登出接口
 	group.POST("/logout", func(r *ghttp.Request) {
 		r.Response.WriteJson(g.Map{
 			"code": 0,
@@ -69,6 +67,5 @@ func main() {
 		})
 	})
 
-	s.SetPort(8199)
 	s.Run()
 }
