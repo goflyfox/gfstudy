@@ -28,8 +28,11 @@ goframe基本介绍，安装和部署，web项目，路由注册、http 客户�
 
 ### 教程目录
 
-* [11.GoFrame实战之登录介绍.md](doc_login/11.GoFrame实战之登录介绍.md)
-* [12.GoFrame实现之登录gsession.md](doc_login/12.GoFrame实现之登录gsession.md)
+* [11.GoFrame登录实战之模板引擎.md](doc_login/11.GoFrame登录实战之模板引擎.md)
+* [12.GoFrame登录实战之登录流程.md](doc_login/12.GoFrame登录实战之登录流程.md)
+* [13.GoFrame登录实战之cookie和session](doc_login/13.GoFrame登录实战之cookie和session.md)
+* [14.GoFrame登录实战之session实现](doc_login/14.GoFrame登录实战之session实现.md)
+* [15.GoFrame实战之数据校验](doc_login/15.GoFrame登录实战之数据校验.md)
 
 ## 代码地址
 
