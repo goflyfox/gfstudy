@@ -60,16 +60,11 @@ func main() {
 	// 用户组
 	userGroup := s.Group("/user")
 	userGroup.Middleware(MiddlewareAuth)
-	userGroup.GET("/index", func(r *ghttp.Request) {
+	// 列表页面
+	group.GET("/user/index", func(r *ghttp.Request) {
 		r.Response.WriteTpl("user_index.html", g.Map{
-			"title": "登录页面",
-		})
-	})
-	userGroup.POST("/list", func(r *ghttp.Request) {
-		r.Response.WriteJson(g.Map{
-			"code": 0,
-			"msg":  "成功",
-			"data": g.List{
+			"title": "列表页面",
+			"dataList": g.List{
 				g.Map{
 					"date":    "2020-04-01",
 					"name":    "朱元璋",
