@@ -14,7 +14,7 @@
 <div id="app">
     <el-row>
         <el-col :span="6" :offset="6" style="text-align: center">
-            <span>${ .title }</span>
+            <span>欢迎【${.realName }】访问 ${ .title }</span>
         </el-col>
     </el-row>
     <el-row>
@@ -68,7 +68,7 @@
 
     var listData = new Array();
     var data;
-    ${range $index, $elem := .listData}
+    ${range $index, $elem := .dataList}
     data = {};
     ${range $key, $value := $elem}
     data['${$key}'] = '${$value}'

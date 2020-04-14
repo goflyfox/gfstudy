@@ -4,6 +4,7 @@ import (
 	"github.com/gogf/gf/frame/g"
 	"github.com/gogf/gf/net/ghttp"
 	"github.com/gogf/gf/os/gsession"
+	"github.com/gogf/gf/util/gconv"
 )
 
 const SessionUser = "SessionUser"
@@ -14,13 +15,10 @@ func main() {
 	// 设置存储方式
 	sessionStorage := g.Config().GetString("SessionStorage")
 	if sessionStorage == "redis" {
-		s.SetConfigWithMap(g.Map{
-			"SessionStorage": gsession.NewStorageRedis(g.Redis()),
-		})
+		s.SetSessionStorage(gsession.NewStorageRedis(g.Redis()))
+		s.SetSessionIdName(g.Config().GetString("server.SessionIdName"))
 	} else if sessionStorage == "memory" {
-		s.SetConfigWithMap(g.Map{
-			"SessionStorage": gsession.NewStorageMemory(),
-		})
+		s.SetSessionStorage(gsession.NewStorageMemory())
 	}
 
 	// 常规注册
@@ -34,15 +32,21 @@ func main() {
 		username := r.GetString("username")
 		password := r.GetString("password")
 
-		//dbUsername := "admin"
-		//dbPassword := "123456"
-		dbUsername := g.Config().GetString("username")
-		dbPassword := g.Config().GetString("password")
-		if username == dbUsername && password == dbPassword {
+		record, err := g.DB().Table("sys_user").Where("login_name = ? ", username).One()
+		// 查询数据库异常
+		if err != nil {
+			r.Response.WriteJson(g.Map{
+				"code": -1,
+				"msg":  err.Error(),
+			})
+			r.Exit()
+		}
+
+		if password == record["password"].String() {
 			// 添加session
 			r.Session.Set(SessionUser, g.Map{
-				"username": dbUsername,
-				"name":     "管理员",
+				"username": username,
+				"realName": record["real_name"].String(),
 			})
 			r.Response.WriteJson(g.Map{
 				"code": 0,
@@ -62,8 +66,10 @@ func main() {
 	userGroup.Middleware(MiddlewareAuth)
 	// 列表页面
 	userGroup.GET("/index", func(r *ghttp.Request) {
+		realName := gconv.String(r.Session.GetMap(SessionUser)["realName"])
 		r.Response.WriteTpl("user_index.html", g.Map{
-			"title": "列表页面",
+			"title":    "用户信息列表页面",
+			"realName": realName,
 			"dataList": g.List{
 				g.Map{
 					"date":    "2020-04-01",
@@ -91,6 +97,14 @@ func main() {
 			"msg":  "登出成功",
 		})
 	})
+
+	// 生成秘钥文件
+	// openssl genrsa -out server.key 2048
+	// 生成证书文件
+	// openssl req -new -x509 -key server.key -out server.crt -days 365
+	s.EnableHTTPS("config/server.crt", "config/server.key")
+	s.SetHTTPSPort(8080)
+	s.SetPort(8199)
 
 	s.Run()
 }
