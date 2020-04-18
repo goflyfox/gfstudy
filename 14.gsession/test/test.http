@@ -1,4 +1,5 @@
-POST http://127.0.0.1:8199/user/index
-Cookie: gSessionId=C1YKVY1S9PUKMPBQQB
+GET http://127.0.0.1/user/index
+Cookie: gSessionId=C24J0ONC99ECJPEWBE
+
 
 ###

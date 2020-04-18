@@ -68,7 +68,7 @@
 
     var listData = new Array();
     var data;
-    ${range $index, $elem := .listData}
+    ${range $index, $elem := .dataList}
         data = {};
         ${range $key, $value := $elem}
         data['${$key}'] = '${$value}'

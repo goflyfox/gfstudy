@@ -7,7 +7,7 @@ password = "123456"
 # SessionStorage = "redis"
 
 [server]
-    Address          = ":8199"
+    Address          = ":80"
     SessionIdName    = "gSessionId"
     SessionPath      = "./gession"
     SessionMaxAge    = "1m"

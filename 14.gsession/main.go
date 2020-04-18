@@ -15,6 +15,7 @@ func main() {
 	sessionStorage := g.Config().GetString("SessionStorage")
 	if sessionStorage == "redis" {
 		s.SetConfigWithMap(g.Map{
+			"SessionIdName":  g.Config().GetString("server.SessionIdName"),
 			"SessionStorage": gsession.NewStorageRedis(g.Redis()),
 		})
 	} else if sessionStorage == "memory" {
