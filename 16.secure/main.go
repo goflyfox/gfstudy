@@ -5,6 +5,7 @@ import (
 	"github.com/gogf/gf/net/ghttp"
 	"github.com/gogf/gf/os/gsession"
 	"github.com/gogf/gf/util/gconv"
+	"github.com/gogf/gf/util/gvalid"
 )
 
 const SessionUser = "SessionUser"
@@ -28,9 +29,24 @@ func main() {
 			"title": "登录页面",
 		})
 	})
+
+	type User struct {
+		Username string `gvalid:"username     @required|length:6,30#请输入用户名称|用户名称长度非法"`
+		Password string `gvalid:"password     @required|length:6,30#请输入密码|密码长度非法"`
+	}
+
 	group.POST("/login", func(r *ghttp.Request) {
 		username := r.GetString("username")
 		password := r.GetString("password")
+
+		// 使用结构体定义的校验规则和错误提示进行校验
+		if e := gvalid.CheckStruct(User{username, password}, nil); e != nil {
+			r.Response.WriteJson(g.Map{
+				"code": -1,
+				"msg":  e.Error(),
+			})
+			r.Exit()
+		}
 
 		record, err := g.DB().Table("sys_user").Where("login_name = ? ", username).One()
 		// 查询数据库异常
