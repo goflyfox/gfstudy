@@ -42,6 +42,7 @@ func main() {
 			r.Exit()
 		}
 
+		// 直接存入前端传输的
 		if password == record["password"].String() {
 			// 添加session
 			r.Session.Set(SessionUser, g.Map{
