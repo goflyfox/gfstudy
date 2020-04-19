@@ -8,6 +8,18 @@ SessionStorage = "redis"
     SessionPath      = "./gession"
     SessionMaxAge    = "1m"
     DumpRouterMap    = true
+    # 系统访问日志
+    AccessLogEnabled = true
+    # 系统异常日志panic
+    ErrorLogEnabled  = true
+    # 系统日志目录，启动，访问，异常
+    LogPath          = "gflogs"
+
+[logger]
+    # 标准日志目录
+    path   = "logs"
+    # 日志级别
+    level  = "all"
 
 # 模板引擎配置
 [viewer]
@@ -20,4 +32,10 @@ SessionStorage = "redis"
     default = "192.168.31.128:6379,0"
 
 [database]
-    link = "mysql:root:123456@tcp(192.168.31.128:3306)/gf-login"
+    [database.logger]
+        Path   = "./dblogs"
+        Level  = "all"
+        Stdout = true
+    [database.default]
+        link   = "mysql:root:123456@tcp(192.168.31.128:3306)/gf-login"
+        debug  = true

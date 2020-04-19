@@ -19,8 +19,10 @@ func TestMd5Salt(t *testing.T) {
 }
 
 func TestBcrypt(t *testing.T) {
-	passwordOK := "admin"
-	passwordERR := "adminxx"
+	passwordOK := "123456"
+	passwordOK, _ = gmd5.EncryptString(passwordOK)
+	passwordERR := "12345678"
+	passwordERR, _ = gmd5.EncryptString(passwordERR)
 
 	hash, err := bcrypt.GenerateFromPassword([]byte(passwordOK), bcrypt.DefaultCost)
 	if err != nil {

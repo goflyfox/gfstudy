@@ -2,11 +2,11 @@
 
 ## GoFrame基础教程-快速入门
 
-### 教程内容
+### 基础教程内容
 
-goframe基本介绍，安装和部署，web项目，路由注册、http 客户端，配置文件、日志打印、Mysql数据库连接、Redis连接，常用工具gstr，gmap，gjson，md5，gconv
+GoFrame基本介绍，安装和部署，web项目，路由注册、http 客户端，配置文件、日志打印、Mysql数据库连接、Redis连接，常用工具gstr，gmap，gjson，md5，gconv
 
-### 教程目录
+### 基础教程目录
 
 * [01.goframe介绍.md](doc_basic/01.goframe介绍.md)
 * [02.goframe基础环境搭建.md](doc_basic/02.goframe基础环境搭建.md)
@@ -19,14 +19,18 @@ goframe基本介绍，安装和部署，web项目，路由注册、http 客户�
 * [09.goframeRedis操作.md](doc_basic/09.goframeRedis操作.md)
 * [10.goframe常用工具介绍.md](doc_basic/10.goframe常用工具介绍.md)
 
-### 教程视频
+### 基础教程视频
 
-* bilibili教程地址：[goframe基础教程-快速入门](https://www.bilibili.com/video/bv157411Z7Le)
-* 西瓜视频教程地址：[goframe基础教程-快速入门](https://www.ixigua.com/pseries/6809290943603147278/)
+* bilibili教程地址：[GoFrame基础教程-快速入门](https://www.bilibili.com/video/bv157411Z7Le)
+* 西瓜视频教程地址：[GoFrame基础教程-快速入门](https://www.ixigua.com/pseries/6809290943603147278/)
 
 ## GoFrame实战教程-登录篇
 
-### 教程目录
+### GoFrame实战教程内容
+
+通过GoFrame实现登录流程；主要讲解模板引擎，登录实现，流程图工具，cookie和session介绍，数据校验，登录安全讲解等
+
+### GoFrame实战教程目录
 
 * [11.GoFrame登录实战之模板引擎.md](doc_login/11.GoFrame登录实战之模板引擎.md)
 * [12.GoFrame登录实战之登录流程.md](doc_login/12.GoFrame登录实战之登录流程.md)
@@ -34,6 +38,12 @@ goframe基本介绍，安装和部署，web项目，路由注册、http 客户�
 * [14.GoFrame登录实战之session实现](doc_login/14.GoFrame登录实战之session实现.md)
 * [15.GoFrame登录实战之数据校验](doc_login/15.GoFrame登录实战之数据校验.md)
 * [16.GoFrame登录实战之登录安全](doc_login/16.GoFrame登录实战之登录安全.md)
+
+### GoFrame实战教程视频
+
+* bilibili教程地址：[GoFrame登录实战](https://www.bilibili.com/video/BV1oT4y1G7ge/)
+* 西瓜视频教程地址：[GoFrame登录实战](https://www.ixigua.com/pseries/6817125437332783629/)
+
 
 ## 代码地址
 

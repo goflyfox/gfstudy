@@ -3,9 +3,11 @@ package main
 import (
 	"github.com/gogf/gf/frame/g"
 	"github.com/gogf/gf/net/ghttp"
+	"github.com/gogf/gf/os/glog"
 	"github.com/gogf/gf/os/gsession"
 	"github.com/gogf/gf/util/gconv"
 	"github.com/gogf/gf/util/gvalid"
+	"golang.org/x/crypto/bcrypt"
 )
 
 const SessionUser = "SessionUser"
@@ -30,9 +32,10 @@ func main() {
 		})
 	})
 
+	// 用户对象
 	type User struct {
-		Username string `gvalid:"username     @required|length:6,30#请输入用户名称|用户名称长度非法"`
-		Password string `gvalid:"password     @required|length:6,30#请输入密码|密码长度非法"`
+		Username string `gvalid:"username     @required|length:5,16#请输入用户名称|用户名称长度非法"`
+		Password string `gvalid:"password     @required|length:31,33#请输入密码|密码长度非法"`
 	}
 
 	group.POST("/login", func(r *ghttp.Request) {
@@ -51,15 +54,35 @@ func main() {
 		record, err := g.DB().Table("sys_user").Where("login_name = ? ", username).One()
 		// 查询数据库异常
 		if err != nil {
+			glog.Error("查询数据错误", err)
 			r.Response.WriteJson(g.Map{
 				"code": -1,
-				"msg":  err.Error(),
+				"msg":  "查询失败",
+			})
+			r.Exit()
+		}
+		// 帐号信息错误
+		if record == nil {
+			r.Response.WriteJson(g.Map{
+				"code": -1,
+				"msg":  "帐号信息错误",
 			})
 			r.Exit()
 		}
 
 		// 直接存入前端传输的
-		if password == record["password"].String() {
+		successPwd := record["password"].String()
+		comparePwd := password
+
+		// 加盐密码
+		// salt := "123456"
+		// comparePwd, _ = gmd5.EncryptString(comparePwd + salt)
+
+		// bcrypt验证
+		err = bcrypt.CompareHashAndPassword([]byte(successPwd), []byte(comparePwd))
+
+		//if comparePwd == successPwd {
+		if err == nil {
 			// 添加session
 			r.Session.Set(SessionUser, g.Map{
 				"username": username,
