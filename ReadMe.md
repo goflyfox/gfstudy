@@ -26,11 +26,11 @@ GoFrame基本介绍，安装和部署，web项目，路由注册、http 客户�
 
 ## GoFrame实战教程-登录篇
 
-### GoFrame实战教程内容
+### GoFrame登录实战教程内容
 
 通过GoFrame实现登录流程；主要讲解模板引擎，登录实现，流程图工具，cookie和session介绍，数据校验，登录安全讲解等
 
-### GoFrame实战教程目录
+### GoFrame登录实战教程目录
 
 * [11.GoFrame登录实战之模板引擎.md](doc_login/11.GoFrame登录实战之模板引擎.md)
 * [12.GoFrame登录实战之登录流程.md](doc_login/12.GoFrame登录实战之登录流程.md)
@@ -39,10 +39,29 @@ GoFrame基本介绍，安装和部署，web项目，路由注册、http 客户�
 * [15.GoFrame登录实战之数据校验](doc_login/15.GoFrame登录实战之数据校验.md)
 * [16.GoFrame登录实战之登录安全](doc_login/16.GoFrame登录实战之登录安全.md)
 
-### GoFrame实战教程视频
+### GoFrame登录实战教程视频
 
 * bilibili教程地址：[GoFrame登录实战](https://www.bilibili.com/video/BV1oT4y1G7ge/)
 * 西瓜视频教程地址：[GoFrame登录实战](https://www.ixigua.com/pseries/6817125437332783629/)
+
+
+# GoFrame工具链
+
+### GoFrame工具链教程内容
+
+GF工具链介绍：主要讲解安装，更新，项目初始化，热编译，交叉编译，model生成，打二进制包，docker等
+
+### GoFrame工具链教程目录
+
+* [17.GoFrame工具链之基本介绍](doc_gf_tool_chain/17.GoFrame工具链之基本介绍.md)
+* [18.GoFrame工具链之项目构建](doc_gf_tool_chain/18.GoFrame工具链之项目构建.md)
+* [19.GoFrame工具链之代码生成](doc_gf_tool_chain/19.GoFrame工具链之代码生成.md)
+* [20.GoFrame工具链之其他命令](doc_gf_tool_chain/20.GoFrame工具链之其他命令.md)
+
+### GoFrame工具链教程视频
+
+* bilibili教程地址：[GoFrame工具链](https://www.bilibili.com/video/BV1YK4y1b7W8/)
+* 西瓜视频教程地址：[GoFrame工具链](https://www.ixigua.com/pseries/6817125437332783629/)
 
 
 ## 代码地址

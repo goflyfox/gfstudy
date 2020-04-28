@@ -2,7 +2,7 @@
 [server]
 	Address     = ":8199"
 	ServerRoot  = "public"
-	LogPath     = "logs-gf"
+	LogPath     = "logs/gf"
 
 # Logger.
 [logger]
@@ -22,6 +22,6 @@
     debug = true
     # Database logger.
     [database.logger]
-        Path   = "logs-sql"
+        Path   = "logs/sql"
         Level  = "all"
         Stdout = true
