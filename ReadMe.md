@@ -62,6 +62,7 @@ GF工具链介绍：主要讲解安装，更新，项目初始化，热编译，
 
 ### 视频地址
 
+* 腾讯课堂教程地址：[GoFrame工具链](https://ke.qq.com/course/2628489?taid=9160688503626633&tuin=13b4f9bd)
 * bilibili教程地址：[GoFrame工具链](https://www.bilibili.com/video/BV1YK4y1b7W8/)
 * 西瓜视频教程地址：[GoFrame工具链](https://www.ixigua.com/pseries/6820830321651483148/)
 
