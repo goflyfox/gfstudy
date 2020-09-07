@@ -66,6 +66,20 @@ GF工具链介绍：主要讲解安装，更新，项目初始化，热编译，
 * bilibili教程地址：[GoFrame工具链](https://www.bilibili.com/video/BV1YK4y1b7W8/)
 * 西瓜视频教程地址：[GoFrame工具链](https://www.ixigua.com/pseries/6820830321651483148/)
 
+## GoFrame实战-正则表达式
+
+### 内容介绍
+
+主要通过示例、工具对正则表达式基本语法进行讲解，并通过gregex进行代码演示。
+
+### 目录结构
+
+* [21.gregex简介.md](doc_regex/21.gregex简介.md)
+* [22.gregex正则详解.md](doc_regex/22.gregex正则详解.md)
+* [23.gregex使用.md](doc_regex/23.gregex使用.md)
+
+### 视频地址
+
 
 ## 四、代码地址
 
