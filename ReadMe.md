@@ -82,10 +82,10 @@ GF工具链介绍：主要讲解安装，更新，项目初始化，热编译，
 
 * 腾讯课堂教程地址：[GoFrame正则表达式实战](https://ke.qq.com/course/2993998?taid=10026334867533646&tuin=13b4f9bd)
 * bilibili教程地址：[GoFrame正则表达式实战](https://www.bilibili.com/video/BV1Ct4y1S7zk/)
-* 西瓜视频地址：* [21.gregex简介](https://www.ixigua.com/6869794999031038471?logTag=czPBvnu07h4aDPFJHvFT8)
-* 西瓜视频地址：* [22.gregex正则详解一](https://www.ixigua.com/6869795168325730824?logTag=MYestcsXky2DXiLxcccBx)
-* 西瓜视频地址：* [23.gregex正则详解二.md](https://www.ixigua.com/6869795292573598216?logTag=ZIm5nLoomZ7_VYeCALhWb)
-* 西瓜视频地址：* [24.gregex使用.md](https://www.ixigua.com/6869795402028155399?logTag=AW8xrn6kna1XbZl5w_BeP)
+* 西瓜视频地址：[21.gregex简介](https://www.ixigua.com/6869794999031038471?logTag=czPBvnu07h4aDPFJHvFT8)
+* 西瓜视频地址：[22.gregex正则详解一](https://www.ixigua.com/6869795168325730824?logTag=MYestcsXky2DXiLxcccBx)
+* 西瓜视频地址：[23.gregex正则详解二.md](https://www.ixigua.com/6869795292573598216?logTag=ZIm5nLoomZ7_VYeCALhWb)
+* 西瓜视频地址：[24.gregex使用.md](https://www.ixigua.com/6869795402028155399?logTag=AW8xrn6kna1XbZl5w_BeP)
 
 ## 四、代码地址
 
