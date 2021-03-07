@@ -2,7 +2,7 @@ package test
 
 import (
 	"fmt"
-	"github.com/gogf/gf/net/ghttp"
+	"github.com/gogf/gf/frame/g"
 	"testing"
 )
 
@@ -10,13 +10,13 @@ var path = "http://127.0.0.1/api"
 
 // GET请求
 func TestGet(t *testing.T) {
-	if response, err := ghttp.Get(path); err != nil {
+	if response, err := g.Client().Get(path); err != nil {
 		panic(err)
 	} else {
 		defer response.Close()
 		t.Log(response.ReadAllString())
 	}
-	if response, err := ghttp.Post(path); err != nil {
+	if response, err := g.Client().Post(path); err != nil {
 		panic(err)
 	} else {
 		defer response.Close()
@@ -26,7 +26,7 @@ func TestGet(t *testing.T) {
 
 // GET请求带参数
 func TestHello(t *testing.T) {
-	if response, err := ghttp.Get(path + "/hello?name=whoami"); err != nil {
+	if response, err := g.Client().Get(path + "/hello?name=whoami"); err != nil {
 		panic(err)
 	} else {
 		defer response.Close()
@@ -36,7 +36,7 @@ func TestHello(t *testing.T) {
 
 // POST请求
 func TestPost(t *testing.T) {
-	if response, err := ghttp.Post(path+"/test", "name=john&age=18"); err != nil {
+	if response, err := g.Client().Post(path+"/test", "name=john&age=18"); err != nil {
 		panic(err)
 	} else {
 		defer response.Close()
@@ -46,7 +46,7 @@ func TestPost(t *testing.T) {
 
 // POST JSON
 func TestPostJson(t *testing.T) {
-	if response, err := ghttp.Post(path+"/test2",
+	if response, err := g.Client().Post(path+"/test2",
 		`{"passport":"john","password":"123456"}`); err != nil {
 		panic(err)
 	} else {
@@ -57,7 +57,7 @@ func TestPostJson(t *testing.T) {
 
 // POST Header头
 func TestPostHeader(t *testing.T) {
-	c := ghttp.NewClient()
+	c := g.Client()
 	c.SetHeader("Cookie", "name=john; score=100")
 	if r, e := c.Post(path + "/test3"); e != nil {
 		panic(e)
@@ -68,7 +68,7 @@ func TestPostHeader(t *testing.T) {
 
 // POST Header头
 func TestPostHeader2(t *testing.T) {
-	c := ghttp.NewClient()
+	c := g.Client()
 	c.SetHeaderRaw(`
 accept-encoding: gzip, deflate, br
 accept-language: zh-CN,zh;q=0.9,en;q=0.8
