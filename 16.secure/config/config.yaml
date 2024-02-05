@@ -1,0 +1,31 @@
+# session存储方式file,memory,redis
+SessionStorage: redis
+server:
+  Address: :80
+  ServerRoot: public
+  SessionIdName: gSessionId
+  SessionPath: ./gession
+  SessionMaxAge: 1m
+  DumpRouterMap: true
+  AccessLogEnabled: true # 系统访问日志
+  ErrorLogEnabled: true # 系统异常日志panic
+  LogPath: gflogs  # 系统日志目录，启动，访问，异常
+logger:
+  path: logs # 标准日志目录
+  level: all  # 日志级别
+viewer: # 模板引擎配置
+  Path: template
+  DefaultFile: index.html
+  Delimiters:
+    - ${
+    - "}"
+redis: # Redis数据库配置
+  default: 192.168.31.128:6379,0
+database:
+  logger:
+    Path: ./dblogs
+    Level: all
+    Stdout: true
+  default:
+    link: mysql:root:123456@tcp(192.168.31.128:3306)/gf-login
+    debug: true

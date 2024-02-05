@@ -1,0 +1,7 @@
+# 模板引擎配置
+viewer:
+  Path: template
+  DefaultFile: index.html
+  Delimiters:
+    - ${
+    - "}"

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- import CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <style>
+        .el-row {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <el-row>
+        <el-col :span="6" :offset="6" style="text-align: center">
+            <span>${ .title }</span>
+        </el-col>
+    </el-row>
+    <el-row>
+        <el-col :span="24">
+            <template>
+                <el-table
+                        :data="tableData"
+                        style="width: 100%">
+                    <el-table-column
+                            prop="date"
+                            label="日期"
+                            width="180">
+                    </el-table-column>
+                    <el-table-column
+                            prop="name"
+                            label="姓名"
+                            width="180">
+                    </el-table-column>
+                    <el-table-column
+                            prop="address"
+                            label="地址">
+                    </el-table-column>
+                </el-table>
+            </template>
+        </el-col>
+    </el-row>
+    <el-row>
+        <el-col :span="6" :offset="6" style="text-align: center">
+            <el-button @click="logout">登出</el-button>
+        </el-col>
+    </el-row>
+
+
+</div>
+</body>
+<!-- import Vue before Element -->
+<script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+<!-- import JavaScript -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+<script src="https://cdn.bootcss.com/axios/0.19.2/axios.min.js"></script>
+
+<script>
+    ${/*
+    tableData: [{
+        date: '2016-05-02',
+        name: '王小虎',
+        address: '上海市普陀区金沙江路 1518 弄'
+    }]
+    */}
+
+    var listData = new Array();
+    var data;
+    ${range $index, $elem := .dataList}
+        data = {};
+        ${range $key, $value := $elem}
+        data['${$key}'] = '${$value}'
+        ${end}
+        listData.push(data)
+    ${end}
+
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            visible: false,
+            tableData: listData
+        },
+        methods: {
+            logout: function () {
+                axios.post('/logout', {}).then(function (res) {
+                    console.log(res.data)
+                    if (res.data.code == 0) {
+                        alert(res.data.msg)
+                        window.location.href = "/"
+                    } else {
+                        alert("失败：" + res.data.msg)
+                    }
+                }).catch(function (error) {
+                    console.log(error);
+                });
+            }
+        },
+        mounted: function () {
+
+        }
+    })
+</script>
+</html>

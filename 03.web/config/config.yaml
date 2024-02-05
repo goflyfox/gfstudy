@@ -1,0 +1,12 @@
+server:
+  Address: :8199 # 端口号
+  ServerRoot: public   # 静态目录
+  IndexFiles: # 入口文件
+    - index.html
+    - main.html
+  AccessLogEnabled: true   # 系统访问日志
+  ErrorLogEnabled: true    # 系统异常日志panic
+  LogPath: gflogs    # 系统日志目录，启动，访问，异常
+logger:
+  path: logs   # 标准日志目录
+  level: all   # 日志级别

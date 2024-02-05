@@ -1,0 +1,25 @@
+viewpath: /home/www/templates/ # 模板引擎目录
+name: hello world!
+database: # MySQL数据库配置
+  default:
+    - host: 127.0.0.1
+      port: "3306"
+      user: root
+      pass: "123456"
+      name: test1
+      type: mysql
+      role: master
+      charset: utf8
+      priority: "1"
+    - host: 127.0.0.1
+      port: "3306"
+      user: root
+      pass: "123456"
+      name: test2
+      type: mysql
+      role: master
+      charset: utf8
+      priority: "1"
+redis: # Redis数据库配置
+  disk: 127.0.0.1:6379,0
+  cache: 127.0.0.1:6379,1

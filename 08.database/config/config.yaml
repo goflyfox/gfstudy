@@ -1,0 +1,4 @@
+# 数据库配置
+database:
+  default:
+    link: mysql:root:A123456@tcp(127.0.0.1:13306)/test

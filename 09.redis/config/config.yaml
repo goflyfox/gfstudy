@@ -1,0 +1,10 @@
+# Redis数据库配置
+redis:
+  default:
+    address: 127.0.0.1:6379
+    db: 1
+  cache:
+    address: 127.0.0.1:6379
+    db: 1
+    pass: "123456"
+    idleTimeout: 600
