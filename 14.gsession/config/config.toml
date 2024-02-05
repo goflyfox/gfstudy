@@ -1,0 +1,24 @@
+# 账号
+username = "admin"
+# 密码
+password = "123456"
+
+# session存储方式file,memory,redis
+# SessionStorage = "redis"
+
+[server]
+    Address          = ":80"
+    SessionIdName    = "gSessionId"
+    SessionPath      = "./gession"
+    SessionMaxAge    = "1m"
+    DumpRouterMap    = true
+
+# 模板引擎配置
+[viewer]
+    Path        = "template"
+    DefaultFile = "index.html"
+    Delimiters  =  ["${", "}"]
+
+# Redis数据库配置
+[redis]
+    default = "192.168.31.128:6379,0"

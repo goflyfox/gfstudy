@@ -1,0 +1,17 @@
+[logger]
+    # 日志目录
+    path   = "logs"
+    # 	all LEVEL_ALL  = LEVEL_DEBU | LEVEL_INFO | LEVEL_NOTI | LEVEL_WARN | LEVEL_ERRO | LEVEL_CRIT
+    #	dev LEVEL_DEV  = LEVEL_ALL
+    #	pro LEVEL_PROD = LEVEL_WARN | LEVEL_ERRO | LEVEL_CRIT
+    level  = "all"
+    # 是否打印到控制台
+    stdout = true
+    [logger.logger1]
+        path   = "logger1"
+        level  = "dev"
+        stdout = true
+    [logger.logger2]
+        path   = "logger2"
+        level  = "prod"
+        stdout = false
