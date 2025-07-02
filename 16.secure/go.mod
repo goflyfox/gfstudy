@@ -3,7 +3,7 @@ module gf-secure
 go 1.21
 
 require (
-	github.com/gogf/gf/v2 v2.6.2
+	github.com/gogf/gf/v2 v2.9.0
 	golang.org/x/crypto v0.14.0
 )
 
