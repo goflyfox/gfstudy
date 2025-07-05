@@ -37,9 +37,13 @@ GoFrame基本介绍，安装和部署，web服务介绍，请求与响应，路�
 ## 三、其他说明
 
 1. QQ交流群：`479196644`
+
 <img src="resources/img/qq.jpg" width="200" height="200" alt="QQ" />
+
 2. WeChat交流：`goflyfox`
+
 <img src="resources/img/wechat.png" width="200" height="200" alt="WeChat" />
+
 3. `example`目录对应教程编号前缀目录就是对应课程示例源码
 4. 项目的发展，离不开大家得支持~！~
 ![jflyfox](resources/img/opensource-pay.jpg)
