@@ -1,4 +1,4 @@
-# GoFrame工具链
+# GoFrame项目脚手架 ｜ GO语言Web开发快速开始
 
 ## 教程目录
 
