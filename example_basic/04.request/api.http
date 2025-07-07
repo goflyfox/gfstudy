@@ -1,0 +1,38 @@
+### GET参数
+GET http://localhost:8199/welcome?name=zhangsan&age=18
+
+### Post参数KV
+POST http://localhost:8199/welcome
+Content-Type: application/x-www-form-urlencoded
+
+name=zhangsan&age=18
+
+### Post参数JSON
+POST http://localhost:8199/welcome
+Content-Type: application/json
+
+{
+  "name": "zhangsan",
+  "age": 18
+}
+
+### Post参数GetStruct
+POST http://localhost:8199/hello
+Content-Type: application/json
+
+{
+  "name": "zhangsan",
+  "age": 18
+}
+
+### Reponse HTML
+GET http://localhost:8199/index1
+
+### Reponse String
+GET http://localhost:8199/index2
+
+### Reponse template
+GET http://localhost:8199/index3
+
+### Reponse XML
+GET http://localhost:8199/index4?name=zhangsan&age=18
