@@ -2,9 +2,9 @@
 
 ## 教程目录
 
-* [01.GoFrame介绍.md](01.GoFrame介绍.md)
-* [02.GoFrame环境搭建.md](02.GoFrame环境搭建.md)
-* [03.GoFrame的WEB服务介绍.md](03.GoFrame的Web服务介绍.md)
+* [01.GoFrame介绍.md](01.GoFrame介绍.md)：Golang基础信息，GoFrame基础、特性、代码结构介绍
+* [02.GoFrame环境搭建.md](02.GoFrame环境搭建.md)：Golang SDK安装、开发工具安装、GoFrame示例代码
+* [03.GoFrame的WEB服务介绍.md](03.GoFrame的Web服务介绍.md)：HTTP协议简单介绍，GoFrame示例基础结构
 * [04.GoFrame请求与响应.md](04.GoFrame请求与响应.md)
 * [05.GoFrame路由注册.md](05.GoFrame路由注册.md)
 * [06.GoFrame中间件.md](06.GoFrame中间件.md)
@@ -14,3 +14,4 @@
 * [10.GoFrame数据库操作.md](10.GoFrame数据库操作.md)
 * [11.GoFrameRedis操作.md](11.GoFrameRedis操作.md)
 * [12.GoFrame常用工具介绍.md](12.GoFrame常用工具介绍.md)
+

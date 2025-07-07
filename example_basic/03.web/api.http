@@ -5,5 +5,5 @@ GET http://localhost:8199/panic
 GET http://localhost:8199/hello
 
 ### welcome
-# curl -v -X POST http://localhost:8199/hello
-POST http://localhost:8199/hello
+# curl -v -X POST http://localhost:8199/welcome
+POST http://localhost:8199/welcome
