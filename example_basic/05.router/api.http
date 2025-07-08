@@ -1,19 +1,19 @@
-### 常规注册
+### 函数注册1
 POST http://localhost:8199/handler
 
-###
+### 函数注册2
 GET http://localhost:8199/handler/abc
 
-###
+### 函数注册3
 GET http://localhost:8199/handler/a/update
 
-###
+### 函数注册4
 GET http://localhost:8199/handler/a/add
 
-###
+### 函数注册5
 GET http://localhost:8199/handler/list/11.html
 
-### 方法注册
+### 函数注册：方法
 GET http://localhost:8199/handler/total
 
 ### 对象注册，默认访问index
@@ -25,13 +25,13 @@ POST http://localhost:8199/object/index
 ### 对象注册，访问show方法
 POST http://localhost:8199/object/show
 
-### 分组，默认访问index
+### 分组注册，默认访问index
 PUT http://localhost:8199/group/all
 
-### 对象注册，直接访问Index
+### 分组注册，直接访问Index
 GET http://localhost:8199/group/get
 
-### 对象注册，访问show方法
+### 分组注册，访问show方法
 POST http://localhost:8199/group/post
 
 ### 规范注册

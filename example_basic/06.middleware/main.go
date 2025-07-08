@@ -22,21 +22,25 @@ func (Hello) Say(ctx context.Context, req *HelloReq) (res *HelloRes, err error) 
 func RequestHandle1(r *ghttp.Request) {
 	g.Log().Info(r.GetCtx(), "前1")
 	r.Middleware.Next()
+	g.Log().Info(r.GetCtx(), "前1结束")
 }
 
 func RequestHandle2(r *ghttp.Request) {
 	g.Log().Info(r.GetCtx(), "前2")
 	r.Middleware.Next()
+	g.Log().Info(r.GetCtx(), "前2结束")
 }
 
 func RequestHandle3(r *ghttp.Request) {
 	g.Log().Info(r.GetCtx(), "前3")
 	r.Middleware.Next()
+	g.Log().Info(r.GetCtx(), "前3结束")
 }
 
 func RequestHandle4(r *ghttp.Request) {
 	g.Log().Info(r.GetCtx(), "前4")
 	r.Middleware.Next()
+	g.Log().Info(r.GetCtx(), "前4结束")
 }
 
 func ResponseHandle1(r *ghttp.Request) {

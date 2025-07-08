@@ -14,27 +14,27 @@ func main() {
 	// hello方法，post调用
 	s.BindHandler("POST:/handler", func(r *ghttp.Request) {
 		g.Log().Info(r.GetCtx(), r.Router.Uri)
-		r.Response.Writeln("url" + r.Router.Uri)
+		r.Response.Writeln("url:" + r.Router.Uri)
 	})
 	// 所有方法，url包含name参数
 	s.BindHandler("/handler/:name", func(r *ghttp.Request) {
 		g.Log().Info(r.GetCtx(), r.Router.Uri)
 		// 获取URL name参数
 		r.Response.Writeln("name:" + r.Get("name").String())
-		r.Response.Writeln("url" + r.Router.Uri)
+		r.Response.Writeln("url:" + r.Router.Uri)
 	})
 	// 所有方法，url包含name参数
 	s.BindHandler("/handler/:name/update", func(r *ghttp.Request) {
 		g.Log().Info(r.GetCtx(), r.Router.Uri)
 		r.Response.Writeln("name:" + r.Get("name").String())
-		r.Response.Writeln("url" + r.Router.Uri)
+		r.Response.Writeln("url:" + r.Router.Uri)
 	})
 	// 所有方法，url包含name和action参数
 	s.BindHandler("/handler/:name/:action", func(r *ghttp.Request) {
 		g.Log().Info(r.GetCtx(), r.Router.Uri)
 		r.Response.Writeln("name:" + r.Get("name").String())
 		r.Response.Writeln("action:" + r.Get("action").String())
-		r.Response.Writeln("url" + r.Router.Uri)
+		r.Response.Writeln("url:" + r.Router.Uri)
 	})
 
 	// 所有方法，url包含field属性
@@ -42,7 +42,7 @@ func main() {
 		g.Log().Info(r.GetCtx(), r.Router.Uri)
 		// 获取URL field属性
 		r.Response.Writeln("field:" + r.Get("field").String())
-		r.Response.Writeln("url" + r.Router.Uri)
+		r.Response.Writeln("url:" + r.Router.Uri)
 	})
 
 	// 方法注册
@@ -56,15 +56,16 @@ func main() {
 	//  ##############对象注册 end
 
 	// ##############分组注册/group start...
-	group := s.Group("/group")
-	group.ALL("/all", func(r *ghttp.Request) {
-		r.Response.Writeln("all")
-	})
-	group.GET("/get", func(r *ghttp.Request) {
-		r.Response.Writeln("get")
-	})
-	group.POST("/post", func(r *ghttp.Request) {
-		r.Response.Writeln("post")
+	s.Group("/group", func(group *ghttp.RouterGroup) {
+		group.ALL("/all", func(r *ghttp.Request) {
+			r.Response.Writeln("all")
+		})
+		group.GET("/get", func(r *ghttp.Request) {
+			r.Response.Writeln("get")
+		})
+		group.POST("/post", func(r *ghttp.Request) {
+			r.Response.Writeln("post")
+		})
 	})
 	//  ##############分组注册 end
 
