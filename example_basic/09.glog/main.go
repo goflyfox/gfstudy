@@ -27,8 +27,9 @@ func main() {
 	// 日志级别设置，过滤掉Info日志信息
 	l := glog.New()
 	l.Info(ctx, "info1")
-	l.SetLevel(glog.LEVEL_ALL ^ glog.LEVEL_INFO)
+	_ = l.SetLevelStr("PROD")
 	l.Info(ctx, "info2")
+	l.Warning(ctx, "warn3")
 	// 支持哪些级别
 	// LEVEL_DEBU | LEVEL_INFO | LEVEL_NOTI | LEVEL_WARN | LEVEL_ERRO | LEVEL_CRIT
 

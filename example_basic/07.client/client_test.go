@@ -72,6 +72,7 @@ func TestPostHeader(t *testing.T) {
 	if r, e := c.Post(gctx.New(), path+"/post/header"); e != nil {
 		panic(e)
 	} else {
+		defer r.Close()
 		r.RawDump()
 	}
 }
@@ -89,6 +90,7 @@ user-agent: my test http client
 	if r, e := c.Post(gctx.New(), path+"/post/header/raw"); e != nil {
 		panic(e)
 	} else {
+		defer r.Close()
 		r.RawDump()
 	}
 }
@@ -105,6 +107,7 @@ func TestHandler(t *testing.T) {
 	if r, e := c.Post(gctx.New(), path); e != nil {
 		panic(e)
 	} else {
+		defer r.Close()
 		r.RawDump()
 	}
 }
