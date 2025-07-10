@@ -38,8 +38,14 @@ func TestDelete(t *testing.T) {
 // Select Where
 func TestWhere(t *testing.T) {
 	// INSERT INTO `user`(`name`) VALUES('john')
-	g.Model("user").Data(g.Map{"uid": 10001, "name": "john"}).Insert()
-	g.Model("user").Data(g.Map{"uid": 10002, "name": "john2"}).Insert()
+	_, err := g.Model("user").Data(g.Map{"uid": 10001, "name": "john"}).Insert()
+	if err != nil {
+		panic(err)
+	}
+	_, err = g.Model("user").Data(g.Map{"uid": 10002, "name": "john2"}).Insert()
+	if err != nil {
+		panic(err)
+	}
 	// 数量
 	count, err := g.Model("user").Where("uid", 10001).Count()
 	if err != nil {

@@ -36,11 +36,11 @@ GoFrame基本介绍，安装和部署，web服务介绍，请求与响应，路�
 
 ## 三、其他说明
 
-1. QQ交流群：`479196644`
+1. 教程交流-QQ交流群：`479196644`
 
 <img src="resources/img/qq.jpg" width="200" height="200" alt="QQ" />
 
-2. WeChat交流：`dadudu19`
+2. 教程交流-WeChat交流：`dadudu19`
 
 <img src="resources/img/wechat.png" width="200" height="200" alt="WeChat" />
 
