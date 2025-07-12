@@ -20,10 +20,10 @@ GoFrame基本介绍，安装和部署，web服务介绍，请求与响应，路�
 * [05.GoFrame路由注册.md](doc_basic/05.GoFrame路由注册.md)
 * [06.GoFrame中间件.md](doc_basic/06.GoFrame中间件.md)
 * [07.GoFrame的HTTP客户端.md](doc_basic/07.GoFrame的HTTP客户端.md)
-* [08.GoFrame配置文件.md](doc_basic/08.GoFrame配置文件.md)
-* [09.GoFrame日志打印.md](doc_basic/09.GoFrame日志打印.md)
-* [10.GoFrame数据库操作.md](doc_basic/10.GoFrame数据库操作.md)
-* [11.GoFrameRedis操作.md](doc_basic/11.GoFrameRedis操作.md)
+* [08.GoFrame配置管理.md](doc_basic/08.GoFrame配置管理.md)
+* [09.GoFrame日志管理.md](doc_basic/09.GoFrame日志管理.md)
+* [10.GoFrame数据库.md](doc_basic/10.GoFrame数据库.md)
+* [11.GoFrameRedis.md](doc_basic/11.GoFrameRedis.md)
 * [12.GoFrame常用工具介绍.md](doc_basic/12.GoFrame常用工具介绍.md)
 
 ### 视频地址
