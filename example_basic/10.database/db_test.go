@@ -33,7 +33,7 @@ func TestUpdate(t *testing.T) {
 
 // Delete
 func TestDelete(t *testing.T) {
-	// DELETE FROM `user` WHERE uid=10
+	// DELETE FROM `user` WHERE uid=10000
 	_, err := g.Model(modelUser).Where("uid", 10000).Delete()
 	if err != nil {
 		panic(err)
