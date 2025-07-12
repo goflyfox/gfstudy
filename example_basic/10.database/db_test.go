@@ -99,6 +99,10 @@ func TestTransaction(t *testing.T) {
 		if err != nil {
 			return err
 		}
+		_, err = tx.Ctx(ctx).Model(modelUser).Delete("uid", id)
+		if err != nil {
+			return err
+		}
 		return nil
 	})
 }
