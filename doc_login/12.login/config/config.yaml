@@ -1,8 +1,0 @@
-username: admin # 账号
-password: "123456" # 密码
-viewer: # 模板引擎配置
-  Path: template
-  DefaultFile: index.html
-  Delimiters:
-    - ${
-    - "}"

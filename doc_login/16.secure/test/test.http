@@ -1,8 +1,0 @@
-POST http://127.0.0.1/user/index
-Cookie: gSessionId=C1YKVY1S9PUKMPBQQB
-
-###
-
-GET https://127.0.0.1/user/index
-
-###
