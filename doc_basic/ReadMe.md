@@ -10,8 +10,8 @@
 * [06.GoFrame中间件.md](06.GoFrame中间件.md)：中间件的使用场景、中间件的优先级
 * [07.GoFrame的HTTP客户端.md](07.GoFrame的HTTP客户端.md)：常见的HTTP客户端以及gclient的调用方法
 * [08.GoFrame配置管理.md](08.GoFrame配置管理.md)：配置管理的特性、默认加载文件及调用示例
-* [09.GoFrame日志管理.md](09.GoFrame日志管理.md)：
-* [10.GoFrame数据库.md](10.GoFrame数据库.md)：
-* [11.GoFrameRedis.md](11.GoFrameRedis.md)：
-* [12.GoFrame常用工具介绍.md](12.GoFrame常用工具介绍.md)：
+* [09.GoFrame日志管理.md](09.GoFrame日志管理.md)：日志配置、日志级别及日志打印
+* [10.GoFrame数据库.md](10.GoFrame数据库.md)：数据库组件特性、数据库配置及增删改查演示
+* [11.GoFrameRedis.md](11.GoFrameRedis.md)：Redis介绍、Redis组件配置及Redis数据结构操作演示
+* [12.GoFrame常用工具.md](12.GoFrame常用工具.md)：常用String、Map、Json、类型转换等工具
 

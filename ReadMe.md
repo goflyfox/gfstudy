@@ -24,7 +24,7 @@ GoFrame基本介绍，安装和部署，web服务介绍，请求与响应，路�
 * [09.GoFrame日志管理.md](doc_basic/09.GoFrame日志管理.md)
 * [10.GoFrame数据库.md](doc_basic/10.GoFrame数据库.md)
 * [11.GoFrameRedis.md](doc_basic/11.GoFrameRedis.md)
-* [12.GoFrame常用工具介绍.md](doc_basic/12.GoFrame常用工具介绍.md)
+* [12.GoFrame常用工具.md](doc_basic/12.GoFrame常用工具.md)
 
 ### 视频地址
 
